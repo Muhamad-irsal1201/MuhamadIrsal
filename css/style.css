@@ -209,8 +209,8 @@ a {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    max-width: 100%;
+    width: 90%;
+    max-width: 1200px;
     z-index: 1000;
     padding: 1rem 2rem;
     transition: var(--transition-smooth);
@@ -1076,15 +1076,4 @@ a {
 .mobile-nav-link.active {
     background: var(--gradient-primary);
     color: white;
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        left: 0;
-        transform: none;
-        width: calc(100% - 20px);
-        max-width: 100%;
-        margin: 0 10px;
-        padding: 0.75rem 1rem;
-    }
 }
