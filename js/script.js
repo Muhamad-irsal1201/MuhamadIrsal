@@ -140,7 +140,9 @@
                 'about.role': 'Arsitek Digital Kreatif',
                 'about.desc1': 'Dengan keahlian yang mencakup pengembangan web, editing video, dan desain grafis, saya menciptakan pengalaman digital yang secara visual menakjubkan dan secara fungsional kuat. Pendekatan saya menggabungkan presisi teknis dengan inovasi kreatif.',
                 'about.desc2': 'Saat ini berperan sebagai mentor di Wowlab, saya membimbing siswa Jepang dalam menavigasi industri IT dan mempersiapkan karir teknologi internasional. Peran ini memungkinkan saya untuk berbagi pengetahuan sambil tetap berada di garis depan kemajuan teknologi.',
+                'about.exp1': 'Lebih dari 1 Tahun',
                 'about.exp': 'Pengalaman Profesional',
+                'about.project1': 'Lebih dari 10 Proyek',
                 'about.project': 'Berhasil Disampaikan',
 
                 // Skills
@@ -234,7 +236,9 @@
                 'about.role': 'Creative Digital Architect',
                 'about.desc1': 'With expertise spanning web development, video editing, and graphic design, I create digital experiences that are both visually stunning and functionally robust. My approach combines technical precision with creative innovation.',
                 'about.desc2': 'Currently serving as a mentor at Wowlab, I guide Japanese students in navigating the IT industry and preparing for international tech careers. This role allows me to share knowledge while staying at the forefront of technological advancements.',
+                'about.exp1': '1+ Years',
                 'about.exp': 'Professional Experience',
+                'about.project1': '10+ Projects',
                 'about.project': 'Successfully Delivered',
 
                 // Skills
@@ -327,7 +331,9 @@
                 'about.role': 'クリエイティブデジタルアーキテクト',
                 'about.desc1': 'ウェブ開発、ビデオ編集、グラフィックデザインにまたがる専門知識により、視覚的に魅力的で機能的に堅牢なデジタル体験を作り出します。私のアプローチは技術的な精密さと創造的な革新を組み合わせています。',
                 'about.desc2': '現在Wowlabでメンターとして活動し、日本の学生がIT業界をナビゲートし、国際的なテクノロジーキャリアを準備するのを指導しています。この役割により、技術の進歩の最前線に立ちながら知識を共有することができます。',
+                'about.exp1': '1年以上',
                 'about.exp': '専門的な経験',
+                'about.project1': '10以上のプロジェクト',
                 'about.project': '成功裏に納品',
 
                 // Skills
