@@ -209,8 +209,8 @@ a {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 100%;
     z-index: 1000;
     padding: 1rem 2rem;
     transition: var(--transition-smooth);
