@@ -167,7 +167,10 @@
                 'projects.p5.desc': 'Situs web berbasis web untuk pengelolaan keuangan yang memungkinkan pelacakan pendapatan dan pengeluaran, pengelolaan kategori transaksi, serta pemantauan ringkasan dan laporan keuangan.',
                 'projects.p6.title': 'Situs Web Perabotan',
                 'projects.p6.desc': ' Situs web katalog furnitur dengan fitur manajemen produk dan antarmuka profesional untuk mendukung promosi bisnis online.',
-
+                'All.filter.subtitle': 'Semua proyek',
+                'Website.filter.subtitle': 'Situs web',
+                'Aplication.filter.subtitle': 'Aplikasi',
+                'Sertification.filter.subtitle': 'Sertifikasi',
 
                 // Experience
                 'experience.title': 'Pengalaman & Pendidikan',
@@ -258,12 +261,16 @@
                 'projects.p2.desc': 'Complete inventory and sales management solution with real-time analytics dashboard.',
                 'projects.p3.title': 'IT Career Mentorship',
                 'projects.p3.desc': 'Comprehensive mentorship program preparing students for international IT careers.',
-                 'projects.p4.title': 'Invitation Wedding',
+                'projects.p4.title': 'Invitation Wedding',
                 'projects.p4.desc': '  A digital wedding invitation website with a modern, responsive design, featuring event details, location, gallery, countdown, and guest RSVP.',
                 'projects.p5.title': 'Financial Management',
                 'projects.p5.desc': 'A web-based website for financial management that allows tracking of income and expenses, management of transaction categories, and monitoring of financial summaries and reports.',
-                 'projects.p6.title': 'Furniture Website',
+                'projects.p6.title': 'Furniture Website',
                 'projects.p6.desc': 'A furniture catalog website with product management features and a professional interface to support online business promotion.',
+                'All.filter.subtitle': 'All Projects',
+                'Website.filter.subtitle': 'Website',
+                'Aplication.filter.subtitle': 'Application',
+                'Sertification.filter.subtitle': 'Sertification',
 
                 // Experience
                 'experience.title': 'Experience & Education',
@@ -359,6 +366,10 @@
                 'projects.p5.desc': '収入と支出を記録し、取引カテゴリを管理し、財務の概要やレポートを確認できるウェブサイトです。',
                  'projects.p6.title': '家具ウェブサイト',
                 'projects.p6.desc': '商品カタログや商品管理機能を備えた、家具ビジネス向けのプロフェッショナルなウェブサイトです。',
+                'All.filter.subtitle': 'すべてのプロジェクト',
+                'Website.filter.subtitle': 'ウェブサイト',
+                'Application.filter.subtitle': 'アプリケーション',
+                'Sertification.filter.subtitle': '資格',
 
                 // Experience
                 'experience.title': '経験と教育',
@@ -606,4 +617,53 @@
 
     initSlider();
 
+});
+
+
+ /* =========================================
+   PROJECT FILTER + SLIDE ANIMATION
+========================================= */
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+
+        // Active state
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filter = button.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+
+            const category = card.getAttribute('data-category');
+
+            if (filter === 'all' || category === filter) {
+                // Show with animation
+                card.style.display = 'block';
+
+                requestAnimationFrame(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+
+                    requestAnimationFrame(() => {
+                        card.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    });
+                });
+
+            } else {
+                // Hide with animation
+                card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+
+                setTimeout(() => {
+                    card.style.display = 'none';
+                }, 300);
+            }
+        });
+    });
 });

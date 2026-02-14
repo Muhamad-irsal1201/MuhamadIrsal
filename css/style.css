@@ -596,12 +596,20 @@ a {
 .project-card {
     overflow: hidden;
     transform-style: preserve-3d;
-    transition: var(--transition-smooth);
+    transition: opacity 0.45s ease, transform 0.45s ease; /* override var(--transition-smooth) untuk animasi */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .project-card:hover {
     transform: translateY(-10px) rotateX(5deg);
     box-shadow: var(--shadow-3d);
+}
+
+.project-card.hide {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none; /* agar card tidak bisa diklik saat hidden */
 }
 
 .project-image {
@@ -640,6 +648,57 @@ a {
     background: var(--gradient-primary);
     color: white;
 }
+
+/* ===============================
+   Project Filters (Portfolio Style)
+================================ */
+.project-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+/* Button */
+.filter-btn {
+    padding: 8px 18px;
+    background: transparent;
+    border: 1px solid rgba(148, 163, 184, 0.22);;                     /* TANPA BORDER */
+    font-size: 14px;                  /* sesuai request */
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    border-radius: 999px;
+    backdrop-filter: none;
+}
+
+/* Hover */
+.filter-btn:hover {
+    color: var(--text-primary);
+}
+
+/* Active & Hover */
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--gradient-primary);
+    color: white;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text-primary);
+}
+
+/* ===============================
+   Mobile: sembunyikan filter
+================================ */
+@media (max-width: 768px) {
+    .project-filters {
+        display: none;
+    }
+}
+
 
 /* =========================================
    PROJECT SLIDER DESKTOP (3 PER SLIDE)
