@@ -751,9 +751,8 @@ a {
     justify-content: center;
 
     font-size: 1.8rem;
-    color: white;
-
-    background: rgba(255, 255, 255, 0.08);
+    color: var(--gradient-primary);
+    background: rgba(29, 29, 29, 0.08);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.2);
 
