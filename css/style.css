@@ -632,6 +632,7 @@ a {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 .project-tag {
